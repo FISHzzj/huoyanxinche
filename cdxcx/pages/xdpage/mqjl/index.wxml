@@ -1,0 +1,157 @@
+<!--pages/demo/table.wxml-->
+<!-- 表头固定 -->
+<view class="grace-table grace-fixed" style="height:100rpx; overflow:hidden;">
+  <view class="grace-table-left">
+    <view class="grace-table-title">ID</view>
+  </view>
+  <scroll-view class="grace-table-right" scroll-left="{{scLeft}}" bindscroll="tabelScroll" scroll-x="true">
+    	<view class="rows" style="width:{{tabelWidth}};">
+        <view class="items">客户姓名</view>
+        <view class="items">身份证号</view>
+        <view class="items">车架号</view>
+        <view class="items">审核状态</view>
+        <view class="items">车辆登记证书</view>
+        <view class="items">操作</view>
+
+      </view>
+  </scroll-view>
+</view>
+<view style='margin-top:100rpx;'>
+		<!-- 数据表格开始 -->
+		<view class="grace-table">
+			<!-- 左侧区域 -->
+			<view class="grace-table-left">
+				<view class="grace-table-title" style='height:80px;' wx:for="{{rightData}}" wx:key="index">{{item.id}}</view>
+			</view>
+			<!-- 右侧侧区域 -->
+			<scroll-view class="grace-table-right" scroll-left="{{scLeft}}" bindscroll="tabelScroll"  scroll-x="true">
+				<view class="rows" wx:for="{{rightData}}" catchtap='ck' style="width:{{tabelWidth}};">
+					<view class="items">{{item.clientName}}</view>
+					<view class="items colorYellow">{{item.certificateNumber}}</view>
+					<view class="items">{{item.vin}}</view>
+					<view class="items colorYellow">{{item.audtiStatus}}</view>
+          <view class="items colorYellow"><image style='width:48px;height:48px;margin-top:10px;' src='{{item.carEightPic}}'></image></view>
+
+          <view class="items colorYellow">
+          <view class="demo-btn-1" id="demo-btn-1">
+        <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/popupmenu.png" mode="widthFix" data-row="{{item}}" catchtap="showMenu1"></image>
+      </view>
+          </view>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+  <!-- 弹窗 -->
+    <graceMaskView show="{{show}}" bgcolor="none" bind:close="closeBanner">
+<view>
+  <view>
+    <scroll-view class="grace-scroll-y" scroll-y>
+      <view class="grace-items grace-items-demo1"><view class='grace-stable' style='margin-top:30px;width:100%'>
+      <view class='title'>
+        <view  style='font-size:20rpx;'>面签类型</view>
+        <view  style='font-size:20rpx;'>面签时间</view>
+        <view  style='font-size:20rpx;'>业务员</view>
+        <view  style='font-size:20rpx;'>面签场所</view>
+        <view  style='font-size:15rpx;'>累计面签次数</view>
+        <view  style='font-size:15rpx;'>首页面签时间</view>
+      </view>
+      <view class='body' wx:for="{{tableData}}" style='{{index % 2 != 0 ? "background:#F1F2F3":""}};height:140rpx;'>
+        <view>{{item.signType}}</view>
+        <view style='display:block;white-space: pre-line;'>{{item.signTime}}</view>
+        <view>{{item.salesman}}</view>
+        <view>{{item.signPlace}}</view>
+        <view>{{item.signCount}}</view>
+        <view style='display:block;white-space: pre-line;'>{{item.firstSignTime}}</view>
+      </view>
+    </view></view>
+      <view class="grace-items grace-items-demo2"> <view class='grace-stable' style='margin-top:0px;width:100%'>
+      <view class='title'>
+        <view  style='font-size:20rpx;'>姓名</view>
+        <view  style='font-size:20rpx;'>身份证</view>
+        <view  style='font-size:20rpx;'>车价</view>
+        <view  style='font-size:20rpx;'>意向车型</view>
+        <view  style='font-size:20rpx;'>意向金额</view>
+        <view  style='font-size:20rpx;'>合作机构</view>
+      </view>
+      <view class='body' wx:for="{{tableData}}" style='{{index % 2 != 0 ? "background:#F1F2F3":""}};height:140rpx;'>
+        <view>{{item.signType}}</view>
+        <view style='display:block;white-space: pre-line;'>{{item.signTime}}</view>
+        <view>{{item.salesman}}</view>
+        <view>{{item.signPlace}}</view>
+        <view>{{item.signCount}}</view>
+        <view style='display:block;white-space: pre-line;'>{{item.firstSignTime}}</view>
+      </view>
+    </view></view>
+      <view class="grace-items grace-items-demo1">
+      <view class="grace-idcard-main">
+    
+     <view class="grace-idcard-preview"  style="display:inline;padding-right:20px;">
+        <video  src="{{ carVideo}}" name="carVideo" style='width:100%;'></video>
+      </view>                   
+      </view></view>
+      <view class="grace-rows" style="margin-top:15px;">
+<view class="grace-items  grace-rows-demo grace-center" style="width:50%;">
+<view  style='float:left;margin-top:295rpx;'>
+     公安网纹照片
+    </view>
+    <image  src="https://raw.githubusercontent.com/taylorchen709/markdown-images/master/vueadmin/user.png"name="carElevenPic" bindtap="selectImg11" style='width:290rpx;height:99px'></image> 
+</view>
+<view class="grace-items  grace-rows-demo grace-center" style="width:50%;">
+<view  style='float:right;margin-top:295rpx;'>
+      人物照片
+    </view>
+    <image  src="https://raw.githubusercontent.com/taylorchen709/markdown-images/master/vueadmin/user.png" name="carTwelvePic" bindtap="selectImg12" style='width:290rpx;height:99px'></image>
+</view>
+</view>
+
+    </scroll-view>
+  </view>
+ 
+    
+    
+      
+
+
+</view>
+</graceMaskView>
+<!-- 弹窗 -->
+      <gracePopupMenu show="{{menu1Show}}" top="{{menu1Top}}" bind:hideMenu="hideMenu">
+        <view class="grace-list" style="background:#4C4C4C; border:0;">
+          <view class='items'>
+            <view class="icons">
+              <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/set.png" mode="widthFix"></image>
+            </view>
+            <view class="title" bindtap="tap1" >编辑</view>
+          </view>
+          <view class='items'>
+            <view class="icons">
+              <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/set.png" mode="widthFix"></image>
+            </view>
+            <view class="title"  bindtap="tap2">面签</view>
+          </view>
+          <view class='items'>
+            <view class="icons">
+              <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/set.png" mode="widthFix"></image>
+            </view>
+            <view class="title"  bindtap="tap3">下线</view>
+          </view>
+          <view class='items'>
+            <view class="icons">
+              <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/set.png" mode="widthFix"></image>
+            </view>
+            <view class="title"  bindtap="tap4">审核</view>
+          </view>
+          <view class='items'>
+            <view class="icons">
+              <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/set.png" mode="widthFix"></image>
+            </view>
+            <view class="title" bindtap="tap5">审核不通过</view>
+          </view>
+          <view class='items'>
+            <view class="icons">
+              <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/set.png" mode="widthFix"></image>
+            </view>
+            <view class="title"  bindtap="tap6">查询</view>
+          </view>
+        </view>
+      </gracePopupMenu>

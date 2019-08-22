@@ -1,0 +1,23 @@
+.grace-table-left{width:100rpx;}/*左侧宽度*/
+.grace-table-right{width:633rpx;}/*右侧数据宽度*/
+/*左侧+右侧 小于等于 750upx/rpx;*/
+/*第一行标题元素的样式*/
+.grace-table-title{width:100%; line-height:100rpx; background:#FFFFFF; justify-content:center; flex-wrap:nowrap; margin-top:2rpx;}
+.grace-table-title view{line-height:100rpx; font-size:30rpx;  justify-content:center; width:100%;}
+.grace-table-right scroll-view{width:100%;}
+/*数据列表外层宽度和高度*/
+/* 说明 请规划 .rows 的宽度 如内部有4个项目 每个 200 upx 则宽度 = 200 * 4 upx */
+.grace-table-right .rows{width:800rpx; margin-top:2rpx; background:#FFFFFF;}
+/*数据单元格样式*/
+.grace-table-right .rows .items{width:20%; line-height:100rpx; justify-content:center; overflow:hidden;}
+.grace-table .title{line-height:80rpx; justify-content:center; background:#FFFFFF;}
+.grace-table .title-in-left{line-height:1.8em; font-size:30rpx; background:#FFFFFF;}
+/* pages/demo/table.wxss */
+page{background:#F4F6F7;}
+.grace-fixed{position:fixed; width:750rpx; z-index:99; left:0; top:0px; background:#F4F6F7;}
+/* 颜色示例 */
+.colorYellow{color:#F4711E !important;}
+.demo-btn-1{width:28px; height:28px; float:right;margin-top: 12px;margin-right: 20px; border-radius:3px; border:1px solid #00C777; text-align:center; font-size:0;}
+.demo-btn-1 image{width:18px; height:18px; margin:5px;}
+.grace-list view{color:#FFF;top:0}
+.grace-list .title{border:0;}

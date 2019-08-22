@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "graceDate": "../../../graceUI/components/graceDate",
+    "gracePopupMenu": "../../../graceUI/components/gracePopupMenu"
+  },
+      "navigationBarTitleText": "征信申请",
+      
+  "enablePullDownRefresh":true
+}

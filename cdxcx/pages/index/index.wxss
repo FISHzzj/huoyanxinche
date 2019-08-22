@@ -1,0 +1,24 @@
+.btn-area button{width:100%; margin:12rpx 0;}
+.button-sp-area button{width:auto; margin:12rpx;}
+.mybussiness{
+  height: 50rpx;
+  /* background-color: blue */
+}
+.jobs{
+  height: 50rpx;
+  width: 150rpx;
+  margin-left: 30rpx;
+  background-color: red;
+  border-radius:5px 0;
+}
+.job1{
+  height: 50rpx;
+  width: 150rpx;
+  margin-left: 230rpx;
+  background-color: red;
+  border-radius:5px 0;
+}
+.rep{
+  color:red;
+  float: left
+}

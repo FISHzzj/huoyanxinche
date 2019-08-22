@@ -1,0 +1,23 @@
+<graceHeader title="弹出层" desc="请点击按钮测试 ^_^"></graceHeader>
+<view class="grace-bg-white grace-common-mt grace-padding grace-common-border">
+  <view style="padding:200rpx 15%;">
+    <button type="primary" bindtap="showBanner">打开演示1</button>
+<button type="primary" bindtap="showBanner2" style='margin-top:12px;'>打开演示2</button>
+  </view>
+  <!-- 弹出层演示1 -->
+  <graceMaskView show="{{show}}" bgcolor="#00C777" bind:close="closeBanner">
+<view>
+<image src="{{staticUrl + 'banner-gui.png'}}" style="width:100%; margin-top:25px; border-top-right-radius:5px; border-top-left-radius:5px;" mode="widthFix"></image>
+<view><button>test</button></view>
+</view>
+<view style="padding:50rpx; padding-bottom:68rpx;">
+<button type='warn' style="background:#F6644D; padding:0 38rpx;">一个按钮</button>
+</view>
+</graceMaskView>
+  <!-- 弹出层演示2 -->
+<graceMaskView show="{{show2}}" bgcolor="none" bind:close="closeBanner2">
+<view>
+<image src="http://static.hcoder.net/graceui/hb.png" style="width:100%; border-radius:5px;" mode="widthFix"></image>
+</view>
+</graceMaskView>
+</view>

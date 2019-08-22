@@ -1,0 +1,36 @@
+<!--pages/demo/popupmenu.wxml-->
+<view>
+  <view class="grace-bg-white grace-common-mt grace-padding grace-common-border">
+    <view style="min-height:30px; width:92%; margin:0 auto; position:relative;">
+      <view style="width:60%; float:left; line-height:28px;">
+        请点击加号按钮测试
+      </view>
+      <view class="demo-btn-1" id="demo-btn-1">
+        <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/popupmenu.png" mode="widthFix" bindtap="showMenu1"></image>
+      </view>
+      <!-- gracePopupMenu 组件外层定位必须为 position:relative;  -->
+      <gracePopupMenu show="{{menu1Show}}" top="{{menu1Top}}" bind:hideMenu="hideMenu">
+        <view class="grace-list" style="background:#4C4C4C; border:0;">
+          <view class='items'>
+            <view class="icons">
+              <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/scan.png" mode="widthFix"></image>
+            </view>
+            <view class="title" bindtap="tap1">功能菜单1</view>
+          </view>
+          <view class='items'>
+            <view class="icons">
+              <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/set.png" mode="widthFix"></image>
+            </view>
+            <view class="title"  bindtap="tap2">功能菜单2</view>
+          </view>
+          <view class='items'>
+            <view class="icons">
+              <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/product.png" mode="widthFix"></image>
+            </view>
+            <view class="title" bindtap="tap3">功能菜单3</view>
+          </view>
+        </view>
+      </gracePopupMenu>
+    </view>
+    </view>
+</view>

@@ -1,0 +1,79 @@
+<graceHeader title="表单界面" desc="页面路径 pages/demo/form"></graceHeader>
+<view class="grace-padding grace-bg-white grace-common-mt grace-common-border">
+  <view class="grace-form">
+    <form bindsubmit="formSubmit">
+      <view class="grace-items">
+        <view class="grace-label">客户姓名</view>
+        <input type="text" class="input" name="clientName" value='{{clientName}}' placeholder='客户姓名'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label">车牌号</view>
+        <input type="text" class="input" name="plateNumbers" value='{{plateNumbers}}' placeholder='车牌号'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label">车架号</view>
+        <input type="text" class="input" name="vin" value='{{vin}}' placeholder='车架号'></input>
+      </view>
+      <view class="grace-items">
+        是否有抵押
+       <view class="grace-label-y">
+          <radio-group name="isPledge">
+            <label><radio value="1" checked="{{istrue}}"/>是</label>
+            <label><radio value="0" checked="{{!istrue}}" />否</label>
+          </radio-group>
+        </view>
+      </view>
+      <!-- 图片 -->
+    <view  style='display:inline;'>
+      保险
+    </view><view  style='float:right'>
+      驾驶证
+    </view>
+    <view class="grace-idcard-items" style="width:700rpx;" >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{insurance}}" bindtap="selectImg1" style='width:290rpx;height:99px'></image>
+      </view>                   
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{drivingLicence}}" bindtap="selectImg2"  style='width:290rpx;height:99px'></image>
+      </view>
+    </view>
+    <view  style='display:inline;'>
+      行驶证
+    </view><view  style='float:right'>
+      抵押大本照片
+    </view>
+    <view class="grace-idcard-items" style="width:700rpx;" >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{driving}}" bindtap="selectImg3" style='width:290rpx;height:99px'></image>
+      </view>                   
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{mortgageLarge}}" bindtap="selectImg4" style='width:290rpx;height:99px'></image>
+      </view>
+    </view>
+    <view  style='display:inline;'>
+      发票
+    </view><view  style='float:right'>
+     交强险
+    </view>
+    <view class="grace-idcard-items" style="width:700rpx;" >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{invoice}}"name="carOnePic" bindtap="selectImg5" style='width:290rpx;height:99px'></image>
+      </view>                   
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{sali}}" bindtap="selectImg6" style='width:290rpx;height:99px'></image>
+      </view>
+    </view>
+    <view  style='display:inline;'>
+      合格证
+    </view>
+    <view class="grace-idcard-items" style="width:700rpx;" >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{certification}}" bindtap="selectImg7" style='width:290rpx;height:99px'></image>
+      </view>                   
+    </view>
+      <view style="padding:22rpx 0;">
+        <button formType="submit" type="primary" style="width:100%;">提交</button>
+      </view>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,124 @@
+<graceHeader title="表单界面" desc="页面路径 pages/demo/form"></graceHeader>
+<view class="grace-padding grace-bg-white grace-common-mt grace-common-border">
+  <view class="grace-form">
+    <form bindsubmit="formSubmit">
+      <view class="grace-items">
+        <view class="grace-label">客户姓名</view>
+        <input type="text" class="input" name="clientName" placeholder='客户姓名'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label">身份证号</view>
+        <input type="text" class="input" name="certificateNumber" placeholder='身份证号'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label">车架号</view>
+        <input type="text" class="input" name="vin" placeholder='车架号'></input>
+      </view>
+
+      <!-- 图片 -->
+      
+  <view class="grace-idcard-main">
+  <view style='color:red'>车辆外观图片</view>
+    <view  style='display:inline;'>
+      正前面
+    </view><view  style='float:right'>
+      正后面
+    </view>
+    <view class="grace-idcard-items" style="width:700rpx;" >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carOnePic}}" bindtap="selectImg1" style='width:290rpx;height:99px'></image>
+      </view>                   
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carTwoPic}}" bindtap="selectImg2" style='width:290rpx;height:99px'></image>
+      </view>
+    </view>
+    <view  style='display:inline;'>
+      四角45度正面
+    </view><view  style='float:right'>
+      四角45度后面
+    </view>
+    <view class="grace-idcard-items" style="width:700rpx;" >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carThreePic}}" bindtap="selectImg3" style='width:290rpx;height:99px'></image>
+      </view>                   
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carFourPic}}" bindtap="selectImg4" style='width:290rpx;height:99px'></image>
+      </view>
+    </view>
+ 
+    <view  style='display:inline;'>
+     车辆原拍照
+    </view><view  style='float:right'>
+      车辆原拍照后面
+    </view>
+    <view class="grace-idcard-items" style="width:700rpx;" >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carFivePic}}" bindtap="selectImg5" style='width:290rpx;height:99px'></image>
+      </view>
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carSixPic}}" bindtap="selectImg6" style='width:290rpx;height:99px'></image>
+      </view>
+    </view>
+
+  </view>
+  <!-- 车辆内饰图片 -->
+  <view class="grace-idcard-main">
+  <view style='color:red'>车辆内饰图片</view>
+    <view  style='display:inline;'>
+      仪表台（包含控制台和档位器）
+    </view><view  style='float:right'>
+      仪表公里数
+    </view>
+    <view class="grace-idcard-items"  >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carSevenPic}}" bindtap="selectImg7" style='width:290rpx;height:99px'></image>
+      </view>                   
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carEightPic}}" bindtap="selectImg8" style='width:290rpx;height:99px'></image>
+      </view>
+    </view>
+ 
+    <view  style='display:inline;'>
+      车顶天窗
+    </view><view  style='float:right'>
+      座椅控制
+    </view>
+    <view class="grace-idcard-items" style="width:700rpx;" >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carNinePic}}" bindtap="selectImg9" style='width:290rpx;height:99px'></image>
+      </view>                   
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carTenPic}}" bindtap="selectImg10" style='width:290rpx;height:99px'></image>
+      </view>
+    </view>
+ 
+    <view  style='display:inline;'>
+     名牌图片
+    </view><view  style='float:right'>
+      车辆登记证
+    </view>
+    <view class="grace-idcard-items" style="width:700rpx;" >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carElevenPic}}" bindtap="selectImg11" style='width:290rpx;height:99px'></image>
+      </view>                   
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carTwelvePic}}" bindtap="selectImg12" style='width:290rpx;height:99px'></image>
+      </view>
+    </view>
+
+  </view>
+  <!-- 视频 -->
+  <button style='width:146rpx;height:50rpx;font-size:25rpx;' bindtap='chooseVideo'>上传视频</button>
+    <view class="grace-idcard-main">
+    
+     <view class="grace-idcard-preview"  style="display:inline;padding-right:20px;">
+        <video src="{{carVideo}}"  style='width:100%;'></video>
+      </view>                   
+      </view>
+      <!-- 图片 -->
+      <view style="padding:22rpx 0;">
+        <button formType="submit" type="primary" style="width:100%;">提交</button>
+      </view>
+    </form>
+  </view>
+</view>

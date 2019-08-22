@@ -1,0 +1,16 @@
+/* pages/add/test/index.wxss */
+.grace-label{
+  float: left;
+  width: 19%;
+  height: 58rpx;
+  line-height: 58rpx;
+  border: 1px solid grey
+}
+.input{
+  float: left;
+  text-align: right;
+  width: 80%;
+  height: 58rpx;
+  line-height: 58rpx;
+  border: 1px solid grey
+}

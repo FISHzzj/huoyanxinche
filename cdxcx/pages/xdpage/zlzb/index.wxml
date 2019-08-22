@@ -1,0 +1,312 @@
+<view class='item'>收入证明</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="proofIncome" data-name="proofIncome" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{proofIncome}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg1" data-name="proofIncome" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+<!-- 111111111 -->
+<view class='item'>银行流水</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="accountStatement" data-name="accountStatement" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{accountStatement}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg2" data-name="accountStatement" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+<!-- 111111111 -->
+<view class='item'>客户身份证</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="customerCard" data-name="customerCard" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{customerCard}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg3" data-name="customerCard" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>配偶身份证</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="spouseCard" data-name="spouseCard" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{spouseCard}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg4" data-name="spouseCard" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>户籍信息</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="censusRegister" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{censusRegister}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg5" data-name="censusRegister" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>居住证明</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="proofResidency" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{proofResidency}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg6" data-name="proofResidency" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>婚姻证明</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="proofMarriage" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{proofMarriage}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg7" data-name="proofMarriage"  id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<form bindsubmit="updateimageinformationinfo">
+<view class='item'>购车合同</view>
+<view class='item'><input placeholder='请输入购车合同编号' bindinput='getcontract' name="purchaseContractId" style='border:1px #000 solid'></input></view>
+
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="purchaseContract" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{purchaseContract}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg8" name="purchaseContractId" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<view class='item'>首付收据</view>
+<view class='item'><input placeholder='请输入首付收据合同编号' bindinput='rpd' name="receiptPaymentId" style='border:1px #000 solid'></input></view>
+
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="receiptPayment" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+        
+    </view>
+    <view class="garce-items" wx:for="{{receiptPayment}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg9" name="receiptPaymentId" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>担保函</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="letterUndertaking" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{letterUndertaking}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg10" data-name="letterUndertaking" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>笔录</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="putDown" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{putDown}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg11" data-name="putDown" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>用途声明</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="purposeStatement" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{purposeStatement}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg12" data-name="purposeStatement" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>共同还款承诺书</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="repaymentUndertaking" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{repaymentUndertaking}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg13" data-name="repaymentUndertaking" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>家访照片</view>
+
+<view class='item'><input placeholder='请输入家访人' bindinput='fvu' name="familyVisitUser" style='border:1px #000 solid'></input></view>
+<view class='item'><input placeholder='请输入家访地点' bindinput='fva' name="familyVisitAddress" style='border:1px #000 solid'></input></view>
+<view class='item'><input placeholder='请输入家访描述' bindinput='fvi' name="familyVisitInfo" style='border:1px #000 solid'></input></view>
+
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="familyVisitPhotos" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+        
+    </view>
+    <view class="garce-items" wx:for="{{familyVisitPhotos}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg14" data-name="familyVisitPhotos" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>客户签字照片和合影</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="customerSignaturePhoto" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{customerSignaturePhoto}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg15" data-name="customerSignaturePhoto" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>营业执照</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="businessLicense" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{businessLicense}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg16" data-name="businessLicense" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>公司章程</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="articlesAssociation" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{articlesAssociation}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg17" data-name="articlesAssociation" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>征信授权书</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="creditInvestigation" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{creditInvestigation}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg18" data-name="creditInvestigation" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>按时还款承诺书</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="repayment" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{repayment}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg19" data-name="repayment"  id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>信用报告</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="creditReport" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{creditReport}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg20" data-name="creditReport" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>车辆抵押</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="vehicleMortgage" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{vehicleMortgage}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg21" data-name="vehicleMortgage" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+
+<!-- 111111111 -->
+<view class='item'>信息采集表</view>
+<view class="grace-add-file grace-common-mt" style='background:#FFF;'>
+    <view class="grace-add-btn" bindtap="addImg" data-name="informationCollectionForm" wx:if="{{btnImg}}">
+        <view>+</view><view>添加照片</view>
+    </view>
+    <view class="garce-items" wx:for="{{informationCollectionForm}}" wx:for-index="index" wx:key="index">
+        <image src="{{item}}" mode="widthFix" bindtap='showImgs' data-imgurl='{{item}}'></image>
+        <view class="grace-close" bindtap="removeImg22" data-name="informationCollectionForm" id="grace-items-img-{{index}}"></view>
+    </view>
+</view>
+<view class='item'>视频资料</view>
+<!-- 222 -->
+<button style='width:146rpx;height:50rpx;font-size:25rpx;' data-name="faceToFaceVideo" bindtap='faceToFaceVideo'>上传视频</button>
+<view class='item'>面签视频</view>
+    <view class="grace-idcard-main">
+    
+     <view class="grace-idcard-preview"  style="display:inline;padding-right:20px;">
+        <video  src="{{ faceToFaceVideo1}}" name="faceToFaceVideo"  style='width:100%;'></video>
+      </view>                   
+      </view>
+
+      <!-- 33 -->
+      <button style='width:146rpx;height:50rpx;font-size:25rpx;' data-name="familyVisitVideo" bindtap='familyVisitVideo'>上传视频</button>
+      <view class='item'>家访视频</view>
+    <view class="grace-idcard-main">
+    
+     <view class="grace-idcard-preview"  style="display:inline;padding-right:20px;">
+        <video  src="{{ familyVisitVideo1}}" name="familyVisitVideo" style='width:100%;'></video>
+      </view>                   
+      </view>
+      <!-- 33 -->
+      <button style='width:146rpx;height:50rpx;font-size:25rpx;' data-name="pledgeVideo" bindtap='pledgeVideo'>上传视频</button>
+      <view class='item'>抵押视频</view>
+    <view class="grace-idcard-main">
+    
+     <view class="grace-idcard-preview"  style="display:inline;padding-right:20px;">
+        <video  src="{{ pledgeVideo1}}" name="pledgeVideo" style='width:100%;'></video>
+      </view>                   
+      </view>
+      <!-- 33 -->
+      <button style='width:146rpx;height:50rpx;font-size:25rpx;' data-name="restsVideo" bindtap='restsVideo'>上传视频</button>
+      <view class='item'>其他视频</view>
+    <view class="grace-idcard-main">
+    
+     <view class="grace-idcard-preview"  style="display:inline;padding-right:20px;">
+        <video  src="{{ restsVideo1}}" name="restsVideo" style='width:100%;'></video>
+      </view>                   
+      </view>
+      <!-- <button bindtap='uptest'>提交</button> -->
+      <button formType="submit" type="primary" style="width:100%;">提交的数据</button>
+      </form>

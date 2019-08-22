@@ -1,0 +1,32 @@
+  <!-- <input type="text" bindinput="bindKeyInput" value='{{inputValue}}' placeholder="" />
+  <button bindtap=''>加入队列</button>
+  <button bindtap=''>获取管理员数组</button>
+   -->
+
+<view class="grace-padding grace-bg-white grace-common-mt grace-common-border">
+    <view style="padding:50rpx 0;" class="grace-wrap" wx:if="{{getAdminInfo.length>0}}">
+        <view class="grace-boxes"  wx:for="{{getAdminInfo}}" wx:item="{{item}}" wx:key="{{item}}">
+            <view class="grace-boxes-img">
+                <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558244953365&di=296600ff8db8a5823e80072514623363&imgtype=0&src=http%3A%2F%2Fstatic1.bigstockphoto.com%2Fthumbs%2F7%2F0%2F3%2Flarge2%2F30744890.jpg" mode="widthFix"></image>
+            </view>
+            <view class="grace-boxes-text">管理员ID:{{item.uid}}</view>
+            <view class="grace-boxes-text">排队人数:{{item.list.length}}</view>
+            <button bindtap='joinq'  data-item='{{item}}' style="width:140rpx;height:50rpx;font-size:20rpx;">加入队列</button>
+        </view>
+    </view>
+    <view style="padding:50rpx 0;" class="grace-wrap" wx:esle>
+      暂无管理员在线
+    </view>
+</view>
+<view class=" agora-bg">
+  <view class="content flex-center-column">
+    <view class="form-section flex-center-column">
+      <view class="inputWrapper">
+        <input placeholder-style='color:#A3D1E0' class="channelInput" placeholder='输入房间名' bindinput="onInputChannel" bindconfirm="onInputChannel" bindblur="onInputChannel" value='{{nowitem.toten}}'></input>
+      </view>
+      <button  bindtap="mqks"  class="joinBtn">面签开始</button>
+       <button  bindtap="hs_root"  class="joinBtn">机器人面签</button>
+      <!-- {{nowitem}} -->
+    </view>
+  </view>
+</view>

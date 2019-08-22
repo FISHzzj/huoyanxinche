@@ -1,0 +1,10 @@
+<view class='container'>
+  <view style="padding:0 0;"  class="grace-wrap">
+    <navigator url="{{item.url}}" class="grace-boxes" wx:for="{{list}}" wx:key="{{item}}">
+        <view class="grace-boxes-img">
+            <image src="{{item.icon}}" mode="widthFix"></image>
+        </view>
+        <view class="grace-boxes-text">{{item.title}}</view>
+    </navigator>
+  </view>
+</view>

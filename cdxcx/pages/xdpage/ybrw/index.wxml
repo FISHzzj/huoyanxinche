@@ -1,0 +1,75 @@
+<!--pages/demo/table.wxml-->
+<!-- 表头固定 -->
+<view class="grace-table grace-fixed" style="height:100rpx; overflow:hidden;">
+  <view class="grace-table-left">
+    <view class="grace-table-title">ID</view>
+  </view>
+  <scroll-view class="grace-table-right" scroll-left="{{scLeft}}" bindscroll="tabelScroll" scroll-x="true">
+    	<view class="rows" style="width:{{tabelWidth}};">
+        <view class="items">业务编号</view>
+        <view class="items">客户姓名</view>
+        <view class="items">业务名称</view>
+        <view class="items">贷款金额</view>
+        <view class="items">分期</view>
+        <view class="items">合作机构</view>
+        <view class="items">任务名称</view>
+        <view class="items">创建时间</view>
+        <view class="items">操作</view>
+
+
+      </view>
+  </scroll-view>
+</view>
+<view style='margin-top:100rpx;'>
+		<!-- 数据表格开始 -->
+		<view class="grace-table">
+			<!-- 左侧区域 -->
+			<view class="grace-table-left">
+				<view class="grace-table-title" style='height:190rpx' wx:for="{{rightData}}" wx:key="index">{{item.id}}</view>
+			</view>
+			<!-- 右侧侧区域 -->
+			<scroll-view class="grace-table-right" scroll-left="{{scLeft}}" bindscroll="tabelScroll"  scroll-x="true">
+				<view class="rows" wx:for="{{rightData}}" style="width:{{tabelWidth}};height:190rpx">
+        	<view class="items" style='margin-left:10px;'>{{item.businessNumber}}</view>
+
+					<view class="items" style='margin-left:10px;'>{{item.clientName}}</view>
+					<view class="items colorYellow" style='margin-left:10px;'>{{item.businessName}}</view>
+					<view class="items" style='margin-left:10px;'>{{item.total}}</view>
+					<view class="items colorYellow" style='margin-left:10px;'>{{item.installmentDeadline}}</view>
+          <view class="items" style='margin-left:10px;'>{{item.Company}}</view>
+					<view class="items colorYellow" style='margin-left:10px;'>{{item.businessName}}</view>
+					<view class="items" style='margin-left:10px;'>{{item.createTime}}</view>
+          <view class="items colorYellow"><image style='width:48px;height:48px;margin-top:10px;' src='{{item.carEightPic}}'></image></view>
+
+          <view class="items colorYellow">
+          <view class="demo-btn-1" id="demo-btn-1">
+        <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/popupmenu.png" mode="widthFix" data-row="{{item}}" bindtap="showMenu1"></image>
+      </view>
+          </view>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+  
+      <gracePopupMenu show="{{menu1Show}}" top="{{menu1Top}}" bind:hideMenu="hideMenu">
+        <view class="grace-list" style="background:#4C4C4C; border:0;">
+          <view class='items'>
+            <view class="icons">
+              <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/set.png" mode="widthFix"></image>
+            </view>
+            <view class="title" bindtap="tap1" >基本信息</view>
+          </view>
+          <view class='items'>
+            <view class="icons">
+              <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/set.png" mode="widthFix"></image>
+            </view>
+            <view class="title"  bindtap="tap2">影像信息</view>
+          </view>
+          <view class='items'>
+            <view class="icons">
+              <image src="http://staticimgs.oss-cn-beijing.aliyuncs.com/set.png" mode="widthFix"></image>
+            </view>
+            <view class="title"  bindtap="tap3">筛选信息</view>
+          </view>
+        </view>
+      </gracePopupMenu>

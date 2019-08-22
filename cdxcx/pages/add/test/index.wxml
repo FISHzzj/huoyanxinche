@@ -1,0 +1,75 @@
+<graceHeader title="graceUI 折叠面板" desc="页面路径 pages/demo/accordion "></graceHeader>
+<view class="grace-padding grace-bg-white grace-common-mt grace-common-border">
+  <view class="grace-accordion">
+<!-- 项目1 -->
+    <view class="grace-accordion-items">
+      <view class="grace-accordion-title {{accordionActive == 'grace-accordion-1' ? 'grace-current' : ''}}" id="grace-accordion-1" bindtap="changeAccordion">
+        图片
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-up" wx:if="{{accordionActive == 'grace-accordion-1'}}"></text>
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-down" wx:else></text>
+      </view>
+      <view class="grace-accordion-body" wx:if="{{accordionActive == 'grace-accordion-1'}}"  style='font-size:0;'>
+        <!-- <image src="/imgs/banner-gui.png" style="width:100%;" mode="widthFix"></image> -->
+    <form bindsubmit="formSubmit">
+      <view class="grace-items">
+        <view class="grace-label">姓名</view>
+        <input type="text" class="input" name="name" placeholder='name'></input>
+        <view style='clear:both;'></view>
+      </view>
+       <view class="grace-items">
+        <view class="grace-label">姓名</view>
+        <input type="text" class="input" name="name" placeholder='name'></input>
+        <view style='clear:both;'></view>
+      </view>
+       <view class="grace-items">
+        <view class="grace-label">姓名</view>
+        <input type="text" class="input" name="name" placeholder='name'></input>
+        <view style='clear:both;'></view>
+      </view>
+       <view class="grace-items">
+        <view class="grace-label">姓名</view>
+        <input type="text" class="input" name="name" placeholder='name'></input>
+        <view style='clear:both;'></view>
+      </view>
+       <view class="grace-items">
+        <view class="grace-label">姓名</view>
+        <input type="text" class="input" name="name" placeholder='name'></input>
+        <view style='clear:both;'></view>
+      </view>
+    </form>
+      </view>
+    </view>
+<!-- 项目2 -->
+    <view class="grace-accordion-items">
+      <view class="grace-accordion-title {{accordionActive == 'grace-accordion-2' ? 'grace-current' : ''}}" id="grace-accordion-2" bindtap="changeAccordion">
+        列表
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-up" wx:if="{{accordionActive == 'grace-accordion-2'}}"></text>
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-down" wx:else></text>
+      </view>
+      <view class="grace-accordion-body" wx:if="{{accordionActive == 'grace-accordion-2'}}">
+        <view class="grace-list" style='border:none;'>
+          <view class='items'>
+            <view class='title'>列表1</view>
+          </view>
+          <view class='items'>
+            <view class='title'>列表2</view>
+          </view>
+          <view class='items'>
+            <view class='title'>列表3</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 项目3 -->
+    <view class="grace-accordion-items">
+      <view class="grace-accordion-title {{accordionActive == 'grace-accordion-3' ? 'grace-current' : ''}}" id="grace-accordion-3" bindtap="changeAccordion">
+        文本
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-up" wx:if="{{accordionActive == 'grace-accordion-3'}}"></text>
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-down" wx:else></text>
+      </view>
+      <view class="grace-accordion-body" wx:if="{{accordionActive == 'grace-accordion-3'}}">
+        <view style="padding:30rpx; line-height:2em;">graceUI - 小程序、uni-app 前端Ui框架 ^_^</view>
+      </view>
+    </view>
+  </view>
+</view>

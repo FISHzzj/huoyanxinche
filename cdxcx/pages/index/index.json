@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "graceSwiper": "../../graceUI/components/graceSwiper"
+  }
+}

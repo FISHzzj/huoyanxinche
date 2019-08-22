@@ -1,0 +1,63 @@
+<graceSwiper swiperId="garce-swiper-1" swiperHeight="290" items="{{swiperItems}}"></graceSwiper>
+<view class='grace-rows mybussiness'>
+<text style='text-align:center;line-height: 2.15;'>我的业务</text>
+<view class='grace-items grace-bg-blue grace-rows-demo grace-center job1' bindtap='addjob'>
+<text style='color:white'>新增业务</text>
+</view>
+<view class='grace-items grace-bg-blue grace-rows-demo grace-center jobs' bindtap='jobpro'>
+<text style='color:white'>进度查询</text>
+</view>
+</view>
+    <view class='grace-stable' style=''>
+      <view class='body'>
+        <view  style='width:50%;height:70rpx'>
+    <view class="grace-h5 grace-blod rep"> 本月新增 </view>
+    <view class="grace-text-small ">{{themouth}}</view>
+    </view>
+        <view style='width:50%;height:70rpx'> <view class="grace-h5 grace-blod rep"> 本周新增 </view>
+    <view class="grace-text-small ">{{theweek}}</view></view>
+      </view>
+      <view class='body'>
+        <view style='width:50%;height:70rpx'> <view class="grace-h5 grace-blod rep"> 昨日新增 </view>
+    <view class="grace-text-small ">{{theyesterday}}</view></view>
+        <view style='width:50%;height:70rpx'> <view class="grace-h5 grace-blod rep"> 今日新增 </view>
+    <view class="grace-text-small ">0</view></view>
+      </view>
+  <view class='body'>
+        <view style='width:50%;height:70rpx'> <view class="grace-h5 grace-blod rep"> 家访分派 </view>
+    <view class="grace-text-small ">{{theday}}</view></view>
+        <view style='width:50%;height:70rpx'> <view class="grace-h5 grace-blod rep"> 家访中 </view>
+    <view class="grace-text-small ">{{familyvisit}}</view></view>
+    
+      </view>
+<view class='body'>
+        <view style='width:50%;height:70rpx'> <view class="grace-h5 grace-blod rep"> 待审核 </view>
+    <view class="grace-text-small ">{{audit}}</view></view>
+        <view style='width:50%;height:70rpx'> <view class="grace-h5 grace-blod rep"> 待上报 </view>
+    <view class="grace-text-small ">{{reported}}</view></view>
+    
+      </view>
+
+ 
+  </view>
+    
+    <navigator url='../xdpage/websocket/index' class="grace-flex grace-common-border " style="height:58px; line-height:58px; color:#000; justify-content:left;">
+           <text style='color:blue'> 视频面签</text>
+    </navigator>
+    <navigator class="grace-flex grace-common-border" style="height:58px; line-height:58px; color:#000; justify-content:left;">
+      <text>车辆评估</text>  
+    </navigator>
+            
+            <navigator class="grace-flex grace-common-border" style="height:58px; line-height:58px; color:#000; justify-content:left;">
+            <text>贷款计算器</text>
+            </navigator><navigator class="grace-flex grace-common-border " style="height:58px; line-height:58px; color:#000; justify-content:left;">
+            <text>维修记录查询</text>
+            </navigator><navigator class="grace-flex grace-common-border" style="height:58px; line-height:58px; color:#000; justify-content:left;">
+           <text> 违章查询</text></navigator>
+           <navigator class="grace-flex  grace-common-border" style="height:58px; line-height:58px; color:#000; justify-content:left;">
+           <text>保险查询</text></navigator>
+           
+           <navigator class="grace-flex grace-common-border" style="height:58px; line-height:58px; color:#000; justify-content:left;">
+           <text> 离线视频</text></navigator>
+           <navigator class="grace-flex grace-common-border" style="height:58px; line-height:58px; color:#000; justify-content:left;">
+           <text> 快速审批</text></navigator>

@@ -1,0 +1,24 @@
+<view class="grace-padding grace-bg-white grace-common-mt grace-common-border">
+ <form bindsubmit="formSubmit">
+      <view class="grace-items">
+        <view class="grace-label">姓名</view>
+        <input type="text" class="input" name="clientName" placeholder='姓名'></input>
+      </view>
+
+      <view class="grace-items">
+        <view class="grace-label">身份证号</view>
+        <input type="text" class="input" name="IDNumber" placeholder='身份证号'></input>
+      </view>
+
+      <view class="grace-items">
+        <view class="grace-label">业务编号</view>
+        <input type="text" class="input" name="businessNumber" placeholder='业务编号'></input>
+      </view>
+
+      <view class="grace-items">
+        <view class="grace-label">业务申请</view>
+        <input type="text" class="input" name="STATUS" value='0'  disabled='disabled' placeholder='状态'></input>
+      </view>
+      <button formType="submit" type="primary">新增</button>
+    </form>
+</view>

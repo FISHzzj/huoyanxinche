@@ -1,0 +1,715 @@
+<view class="grace-padding grace-bg-white grace-common-mt grace-common-border">
+  <view class="grace-accordion">
+<!-- 项目1 -->
+    <view class="grace-accordion-items ">
+      <view class="grace-accordion-title {{accordionActive == 'grace-accordion-1' ? 'grace-current' : ''}}" id="grace-accordion-1" bindtap="changeAccordion">
+        申请人
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-up" wx:if="{{accordionActive == 'grace-accordion-1'}}"></text>
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-down" wx:else></text>
+      </view>
+      <view class="grace-accordion-body " wx:if="{{accordionActive == 'grace-accordion-1'}}"  style='font-size:0;'>
+  <form bindsubmit="formSubmit">
+      <view class="grace-items" hidden="false">
+          <view class="grace-label clear">id</view>
+          <input type="text" class="input" name="applicantid" value='{{pagesource.applicantId}}' placeholder=''></input>
+        </view>
+      <view class="grace-items ">
+        <view class="grace-label clear">姓名</view>
+        <input type="text" class="input" name="NAME" value='{{applicant.NAME}}' placeholder='客户姓名'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label clear">性别</view>
+        <checkbox-group name="sex">
+        <checkbox checked='{{apsex1}}' value='1'>
+        男
+        </checkbox> 
+        <checkbox checked='{{apsex2}}' value='0'>
+        女
+        </checkbox> 
+        </checkbox-group>
+        
+      </view>
+      <view class="grace-items">
+        <view class="grace-label clear">身份证号：</view>
+        <input type="text" class="input" name="IDNumber" value='{{applicant.IDNumber}}' placeholder='身份证号'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label clear">年龄：</view>
+        <input type="text" class="input" name="age" value='{{applicant.age}}' placeholder='年龄'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label clear">移动电话</view>
+        <input type="text" class="input" name="phone" value='{{applicant.phone}}' placeholder='移动电话'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label clear">婚姻家庭</view>
+        <input type="text" class="input" name="marriage" value='{{applicant.marriage}}' placeholder='婚姻家庭'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label clear">家庭人数</view>
+        <input type="text" class="input" name="familySize" value='{{applicant.familySize}}' placeholder='家庭人数'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label clear">户籍属地</view>
+        <input type="text" class="input" name="censusRegister" value='{{applicant.censusRegister}}' placeholder='户籍属地'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label clear">学历</view>
+        <input type="text" class="input" name="education" value='{{applicant.education}}' placeholder='学历'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label clear">居住情况</view>
+        <input type="text" class="input" name="residentialAddress" value='{{applicant.residentialAddress}}' placeholder='居住情况'></input>
+        
+      </view>
+      <view class="grace-items">
+        <view class="grace-label clear">详情地址</view>
+        <input name="residentialAddressDetail" type="text" value='{{applicant.residentialAddressDetail}}' class="input" placeholder='详情地址'></input>
+        </view>
+       <view class="grace-items">
+        <view class="grace-label clear">住房性质</view>
+      <view class="grace-label-x">
+        <checkbox-group name="housingNature" >
+          <label style="font-size:18rpx"><checkbox value="0" checked="{{hn0}}"></checkbox>自有</label>
+          <label style="font-size:18rpx"><checkbox value="1" checked="{{hn1}}"></checkbox>租赁</label>
+          <label style="font-size:18rpx"><checkbox value="2" checked="{{hn2}}"></checkbox>其他</label>
+         
+        </checkbox-group>
+      </view>
+      </view>
+       <view class="grace-items">
+        <view class="grace-label clear">房屋面积</view>
+        <input type="text" class="input" name="housingArea" value='{{applicant.housingArea}}' placeholder='房屋面积'></input>
+      </view>
+     
+      <view style='color:red'>工作单位</view>
+      <!-- -分割线-- -->
+      <view class="grace-items">
+        <view class="grace-label clear">名称</view>
+        <input type="text" class="input" name="workUnit" value='{{applicant.workUnit}}' placeholder='名称'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label clear">电话</view>
+        <input type="text" class="input" name="workUnitPhone" value='{{applicant.workUnitPhone}}' placeholder='电话'></input>
+      </view>
+
+
+      <view class="grace-items">
+      <view class="grace-label clear">性质</view>
+      <view class="grace-label-x">
+        <checkbox-group name="workUnitNature" >
+          <label style="font-size:18rpx"><checkbox value="1" checked="{{workUnitNature1}}"></checkbox>国家机关</label>
+          <label style="font-size:18rpx"><checkbox value="2" checked="{{workUnitNature2}}"></checkbox>事业单位</label>
+          <label style="font-size:18rpx"><checkbox value="3" checked="{{workUnitNature3}}"></checkbox>国有企业</label>
+          <label style="font-size:18rpx"><checkbox value="4" checked="{{workUnitNature4}}"></checkbox>股份制企业</label>
+          <label style="font-size:18rpx"><checkbox value="5" checked="{{workUnitNature5}}"></checkbox>私营企业</label>
+          <label style="font-size:18rpx"><checkbox value="6" checked="{{workUnitNature6}}"></checkbox>外资独资企业</label>
+          <label style="font-size:18rpx"><checkbox value="0" checked="{{workUnitNature0}}"></checkbox>其他</label>
+        </checkbox-group>
+      </view>
+    </view>
+
+      <view class="grace-items">
+        <view class="grace-label clear">地址</view>
+        <input type="text" class="input" name="workUnitAddress" value='{{applicant.workUnitAddress}}' placeholder='地址'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label clear">邮编</view>
+        <input type="text" class="input" name="workUnitPostcode" value='{{applicant.workUnitPostcode}}' placeholder='车架号'></input>
+      </view>
+     <view style='color:red'>收入信息</view>
+
+      <view class="grace-items">
+          <view class="grace-label clear" style='height:300rpx;text-align:center;lineheight:30rpx;'>收入来源</view>
+          <view class="grace-label-x">
+            <checkbox-group>
+             <view class="grace-margin">
+		<view>
+
+			<view class="demo1">
+      <label style="font-size:20rpx">
+      <checkbox-group   >
+      <checkbox value="1"checked='{{applicant.wagesIncome}}'>
+      </checkbox></checkbox-group>工薪收入-</label>
+      月均约<input class='wgin' name="wagesIncome" value='{{applicant.wagesIncome}}'></input>元
+      </view>
+
+			<view class="demo1 ">
+      <label style="font-size:20rpx;margin-top:40rpx;">
+      <checkbox-group >
+      <checkbox checked='{{applicant.manageIncome}}' value="2" ></checkbox>
+      </checkbox-group>经营收入-</label>月均约<input class='wgin' name="manageIncome" value='{{applicant.manageIncome}}'></input>元
+      </view>
+
+      <view class='demo2'>
+      <label style="font-size:20rpx">
+      <checkbox-group name="otherIncome"><checkbox value="3"  checked='{{applicant.otherIncome}}'></checkbox>
+      </checkbox-group>其他</label>
+			（<label style="font-size:20rpx">
+          <checkbox value="4" checked='{{otherIncome1}}'></checkbox>投资</label>
+          <label style="font-size:20rpx"><checkbox value="5" checked='{{otherIncome2}}'></checkbox>租赁
+        </label>
+        <input class='goinput' name="otherIncomeName" value='{{applicant.otherIncomeName}}' placeholder='其他收入名称'></input>
+            <text style='float:left;height:auto;'>月均约元</text> 
+            <input class='goinput2' name="otherIncome" value='{{applicant.otherIncome}}'></input>)
+        </view>
+		  </view>
+    </view>
+              
+            
+            </checkbox-group>
+      </view>
+        </view>
+    <view class="grace-items" style='margin-top:80rpx'>
+          <view class="grace-label1 clear">收入材料</view>
+          <view class="grace-label-x">
+          <checkbox-group name="incomeMaterials" >
+          <label style="font-size:20rpx"><checkbox value="1" checked='{{incomeMaterials1}}'></checkbox>收入声明</label>
+          <label style="font-size:20rpx"><checkbox value="2" checked='{{incomeMaterials2}}'></checkbox>收入证明</label>
+          <label style="font-size:20rpx"><checkbox value="3" checked='{{incomeMaterials3}}'></checkbox>银行流水</label>
+          <label style="font-size:20rpx"><checkbox value="4" checked='{{incomeMaterials4}}'></checkbox>公积金</label>
+          <label style="font-size:20rpx"><checkbox value="5" checked='{{incomeMaterials5}}'></checkbox>社保</label>
+          <label style="font-size:20rpx"><checkbox value="6" checked='{{incomeMaterials6}}'></checkbox>纳税</label>
+          <label style="font-size:20rpx"><checkbox value="7" checked='{{incomeMaterials7}}'></checkbox>房租</label>
+          <label style="font-size:20rpx"><checkbox value="0" checked='{{incomeMaterials0}}'></checkbox>其他</label>
+        </checkbox-group>
+      </view>
+        </view>
+      <button formType="submit" type="primary" style="width:100%;">提交</button>
+  </form>
+      </view>
+    </view>
+    <!-- 申请人配偶 -->
+    <view class="grace-accordion-items" wx:if="{{girl}}">
+      <view class="grace-accordion-title {{accordionActive == 'grace-accordion-5' ? 'grace-current' : ''}}" id="grace-accordion-5" bindtap="changeAccordion">
+        申请人配偶情况
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-up" wx:if="{{accordionActive == 'grace-accordion-5'}}"></text>
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-down" wx:else></text>
+      </view>
+      <view class="grace-accordion-body" wx:if="{{accordionActive == 'grace-accordion-5'}}">
+  <form bindsubmit="formSubmit2">
+    <view style='color:red'>基本信息</view>
+    <view class="grace-items ">
+        <view class="grace-label clear">姓名</view>
+        <input type="text" class="input" name="NAME" value='{{applicantSpouse.NAME}}' placeholder='姓名'></input>
+    </view>
+    <view class="grace-items">
+        <radio-group name="sex">
+        <view class="grace-label clear">性别</view>
+            <label><radio value="1" checked='{{!spousesex}}'></radio>男</label>
+            <label><radio value="0" checked='{{spousesex}}'></radio>女</label>
+        </radio-group>
+      </view>
+      <view class="grace-items ">
+        <view class="grace-label clear">身份证号:</view>
+        <input type="text" class="input" name="IDNumber" value='{{applicantSpouse.IDNumber}}' placeholder='身份证号'></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">移动电话:</view>
+        <input type="text" class="input" name="phone" value='{{applicantSpouse.phone}}' placeholder='移动电话'></input>
+    </view>
+    <view style='color:red'>工作单位</view>
+    <view class="grace-items ">
+        <view class="grace-label clear">名称:</view>
+        <input type="text" class="input" name="workUnit" value='{{applicantSpouse.workUnit}}' placeholder='名称'></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">单位电话:</view>
+        <input type="text" class="input" name="workUnitPhone" value='{{applicantSpouse.workUnitPhone}}' placeholder='单位电话'></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">地址:</view>
+        <input type="text" class="input" name="workUnitAddress" value='{{applicantSpouse.workUnitAddress}}' placeholder='地址'></input>
+        
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">详细地址:</view>
+        <input type="text" class="input" name="workUnitAddressDetail" value='{{applicantSpouse.workUnitAddressDetail}}' placeholder='详细地址'></input>
+        
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">月收入:</view>
+        <input type="text" class="input" name="incomeMoney" value='{{applicantSpouse.incomeMoney}}' placeholder='月收入-元'></input>
+        
+    </view>
+    <button formType="submit" type="primary" style="width:100%;">提交</button>
+    </form>
+      </view>
+    </view>
+    <!-- 共同还款人配偶 -->
+    
+<!-- 项目2 -->
+    <view class="grace-accordion-items">
+      <view class="grace-accordion-title {{accordionActive == 'grace-accordion-2' ? 'grace-current' : ''}}" id="grace-accordion-2" bindtap="changeAccordion">
+        共同偿债人情况
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-up" wx:if="{{accordionActive == 'grace-accordion-2'}}"></text>
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-down" wx:else></text>
+      </view>
+      <view class="grace-accordion-body" wx:if="{{accordionActive == 'grace-accordion-2'}}">
+  <form bindsubmit="formSubmit3">
+    <view style='color:red'>基本信息</view>
+    <view class="grace-items ">
+        <view class="grace-label clear">姓名</view>
+        <input type="text" class="input" name="NAME" value='{{coSolvency.NAME}}' placeholder='姓名'></input>
+        </view>
+    <view class="grace-items">
+      <view class="grace-label clear">性别</view>
+        <view class="grace-label-x">
+          <checkbox-group name="sex" value='{{coSolvency.sex}}'>
+          <label style="font-size:20rpx"> <checkbox value="1" checked='{{!cosex}}'></checkbox>男</label>
+          <label style="font-size:20rpx"><checkbox value="0" checked='{{cosex}}'></checkbox>女</label>
+        </checkbox-group>
+        </view>
+    </view>
+      <view class="grace-items ">
+        <view class="grace-label clear">身份证号</view>
+        <input type="text" class="input" name="IDNumber" value='{{coSolvency.IDNumber}}' placeholder='身份证号'></input>
+        </view>
+    <view class="grace-items">
+      <view class="grace-label clear">移动电话</view>
+      <input type="text" class="input" name="phone" value='{{coSolvency.phone}}' placeholder='移动电话'></input>
+      </view>
+      <view class="grace-items ">
+        <view class="grace-label clear">婚姻状态</view>
+        <view class="grace-label-x">
+          <checkbox-group name="marriage" value='{{coSolvency.marriage}}'>
+          <label style="font-size:20rpx"><checkbox value="1" checked='{{comarriage}}'></checkbox>有配偶</label>
+          <label style="font-size:20rpx"> <checkbox value="2" checked='{{!comarriage}}'></checkbox>无配偶</label>
+        </checkbox-group>
+      </view>
+        </view>
+    <view class="grace-items">
+      <view class="grace-label clear">与申请人关系</view>
+        <view class="grace-label-x">
+          <checkbox-group name="applicantRelation" value='{{coSolvency.applicantRelation}}'>
+          <label style="font-size:20rpx"><checkbox value="1" checked='{{!coapplicantRelation}}'></checkbox>父(母)子</label>
+          <label style="font-size:20rpx"> <checkbox value="0" checked='{{coapplicantRelation}}'></checkbox>子女</label>
+        </checkbox-group>
+      </view>
+      </view>
+    <view class="grace-items">
+      <view class="grace-label clear">学历</view>
+      <input type="text" class="input" name="education" value='{{coSolvency.education}}' placeholder='学历'></input>
+      </view>
+    <view class="grace-items">
+      <view class="grace-label clear">住宅地址</view>
+      <input type="text" class="input" name="residentialAddress" value='{{coSolvency.residentialAddress}}' placeholder='住宅地址'></input>
+      </view>
+      <view style='color:red'>收入信息</view>
+    
+
+      <view class="grace-items">
+          <view class="grace-label clear" style='height:300rpx;text-align:center;lineheight:30rpx;'>收入来源</view>
+          <view class="grace-label-x">
+            <checkbox-group>
+             <view class="grace-margin">
+		<view>
+			<view class="demo1">
+      <label style="font-size:20rpx">
+      <checkbox value="1" checked='{{cowagesIncome}}'></checkbox>工薪收入-</label>月均约<input class='wgin' value='{{coSolvency.wagesIncome}}'></input>元</view>
+			<view class="demo1 "> 
+      <label style="font-size:20rpx;margin-top:40rpx;"><checkbox value="2" checked='{{comanageIncome}}'></checkbox>
+      经营收入-月均约<input class='wgin' value='{{coSolvency.manageIncome}}'></input>元
+      </label>
+      </view>
+
+      <view class='demo2'>
+      <label style="font-size:20rpx">
+      <checkbox value="3" checked='{{cootherIncome}}'></checkbox>其他</label>
+
+			      （<label style="font-size:20rpx">
+            <checkbox value="4" checked='{{}}'></checkbox>投资</label>
+             <label style="font-size:20rpx">
+             <checkbox value="5" checked='{{}}'></checkbox>租赁
+             
+             </label>
+             <input class='goinput' placeholder='其他收入名称' name="" value='{{coSolvency.otherIncomeName}}'></input>
+             <text style='float:left;height:auto;'>月均约元</text> 
+             <input class='goinput2' name="otherIncome" value='{{coSolvency.otherIncome}}'></input>)
+        </view>
+		  </view>
+    </view>
+        </checkbox-group>
+      </view>
+        </view>
+
+      <view style='color:red;margin-top:20rpx;'>工作单位</view>
+      <view class="grace-items">
+      <view class="grace-label clear">名称</view>
+      <input type="text" class="input" name='workUnit' value='{{coSolvency.workUnit}}' placeholder='名称'></input>
+      </view>
+      <view class="grace-items">
+      <view class="grace-label clear">电话</view>
+      <input type="text" class="input" name='workUnitPhone' value='{{coSolvency.workUnitPhone}}' placeholder='电话'></input>
+      </view><view class="grace-items">
+      <view class="grace-label clear">性质</view>
+      
+      <view class="grace-label-x">
+          <checkbox-group name="workUnitNature" value='{{coSolvency.workUnitNature}}'>
+          <label style="font-size:20rpx"><checkbox value="1" checked='{{cowun1}}'></checkbox>国家机关</label>
+          <label style="font-size:20rpx"> <checkbox value="2" checked='{{cowun2}}'></checkbox>事业单位</label>
+          <label style="font-size:20rpx"><checkbox value="3" checked='{{cowun3}}'></checkbox>国有企业</label>
+          <label style="font-size:20rpx;margin-left:60rpx;"><checkbox value="4" checked='{{cowun4}}'></checkbox>股份制企业</label>
+          <label style="font-size:20rpx"><checkbox value="5" checked='{{cowun5}}'></checkbox>私营企业</label>
+          <label style="font-size:20rpx;margin-left:182rpx;"><checkbox value="6" checked='{{cowun6}}'></checkbox>外资独资企业</label>
+          <label style="font-size:20rpx"><checkbox value="0" checked='{{cowun0}}'></checkbox>其他</label>
+        </checkbox-group>
+      </view>
+      </view>
+      <view class="grace-items">
+      <view class="grace-label clear">地址</view>
+      
+      <input type="text" class="input" name='workUnitAddress' value='{{coSolvency.workUnitAddress}}' placeholder='地址'></input>
+      </view>
+      <view class="grace-items">
+      <view class="grace-label clear">邮编</view>
+      <input type="text" class="input" name='workUnitPostcode' value='{{coSolvency.workUnitPostcode}}' placeholder='邮编'></input>
+      </view>
+      <view class="grace-items">
+      <view class="grace-label clear">收入材料</view>
+      <view class="grace-label-x">
+          <checkbox-group name="incomeMaterials" >
+          <label style="font-size:20rpx"><checkbox value="1" checked='{{coincom1}}'></checkbox>收入声明</label>
+          <label style="font-size:20rpx"> <checkbox value="2" checked='{{coincom2}}'></checkbox>收入证明</label>
+          <label style="font-size:20rpx"><checkbox value="3" checked='{{coincom3}}'></checkbox>银行流水</label>
+         
+          <label style="font-size:20rpx;margin-left:60rpx;"><checkbox value="4" checked='{{coincom4}}'></checkbox>公积金</label>
+          <label style="font-size:20rpx"><checkbox value="5" checked='{{coincom5}}'></checkbox>社保</label>
+          <label style="font-size:20rpx"><checkbox value="6" checked='{{coincom6}}'></checkbox>纳税</label>
+          <label style="font-size:20rpx"><checkbox value="0" checked='{{coincom0}}'></checkbox>其他</label>
+        </checkbox-group>
+      </view>
+      </view>
+      <button formType="submit" type="primary" style="width:100%;">提交</button>
+    </form>
+      </view>
+    </view>
+    <!-- 分割线 -->
+    <view class="grace-accordion-items" wx:if="{{girl2}}">
+      <view class="grace-accordion-title {{accordionActive == 'grace-accordion-6' ? 'grace-current' : ''}}" id="grace-accordion-6" bindtap="changeAccordion">
+        共同偿债人配偶情况
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-up" wx:if="{{accordionActive == 'grace-accordion-6'}}"></text>
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-down" wx:else></text>
+      </view>
+      <view class="grace-accordion-body" wx:if="{{accordionActive == 'grace-accordion-6'}}">
+  <form bindsubmit="formSubmit3">
+    <view style='color:red'>基本信息</view>
+    <view class="grace-items ">
+        <view class="grace-label clear">姓名</view>
+        <input type="text" class="input" name="NAME" value='{{coSolvencySpouse.NAME}}' placeholder='姓名'></input>
+    </view>
+    <view class="grace-items">
+        <radio-group name="sex">
+        <view class="grace-label clear">性别</view>
+            <label><radio value="1" checked='{{!spousesex}}'></radio>男</label>
+            <label><radio value="0" checked='{{spousesex}}'></radio>女</label>
+        </radio-group>
+      </view>
+      <view class="grace-items ">
+        <view class="grace-label clear">身份证号:</view>
+        <input type="text" class="input" name="IDNumber" value='{{coSolvencySpouse.IDNumber}}' placeholder='身份证号'></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">移动电话:</view>
+        <input type="text" class="input" name="phone" value='{{coSolvencySpouse.phone}}' placeholder='移动电话'></input>
+    </view>
+    <view style='color:red'>工作单位</view>
+    <view class="grace-items ">
+        <view class="grace-label clear">名称:</view>
+        <input type="text" class="input" name="workUnit" value='{{coSolvencySpouse.workUnit}}' placeholder='名称'></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">单位电话:</view>
+        <input type="text" class="input" name="workUnitPhone" value='{{coSolvencySpouse.workUnitPhone}}' placeholder='单位电话'></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">地址:</view>
+        <input type="text" class="input" name="workUnitAddress" value='{{coSolvencySpouse.workUnitAddress}}' placeholder='地址'></input>
+        
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">详细地址:</view>
+        <input type="text" class="input" name="workUnitAddressDetail" value='{{coSolvencySpouse.workUnitAddressDetail}}' placeholder='详细地址'></input>
+        
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">月收入:</view>
+        <input type="text" class="input" name="incomeMoney" value='{{coSolvencySpouse.incomeMoney}}' placeholder='月收入-元'></input>
+        
+    </view>
+    <button formType="submit" type="primary" style="width:100%;">提交</button>
+    </form>
+      </view>
+    </view>
+    <!-- --分割线-- -->
+    <view class="grace-accordion-items">
+      <view class="grace-accordion-title {{accordionActive == 'grace-accordion-3' ? 'grace-current' : ''}}" id="grace-accordion-3" bindtap="changeAccordion">
+        申请分期情况
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-up" wx:if="{{accordionActive == 'grace-accordion-3'}}"></text>
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-down" wx:else></text>
+      </view>
+      <view class="grace-accordion-body" wx:if="{{accordionActive == 'grace-accordion-3'}}">
+        <view class="grace-list" style='border:none;'>
+          
+          <form bindsubmit="formSubmit">
+    <view style='color:red'>分期信息</view>
+
+  <view class="grace-items">
+          <view class="grace-label clear" style='height:240rpx;text-align:center;'>分期用途</view>
+          <view class="grace-label-x">
+            <checkbox-group name="InstallmentUSES" value='{{periodization.InstallmentUSES}}'>
+             <view class="grace-margin">
+		<view>
+			<view class="demo1"><label style="font-size:20rpx"><checkbox value="1" checked='{{fqyt1}}'></checkbox>自用车购车消费</label></view>
+			<view class="demo1 ">(<label style="font-size:20rpx;margin-top:20rpx;"><checkbox value="2" checked='{{fqyt2}}'></checkbox>新车</label><label style="font-size:20rpx;margin-top:20rpx;"><checkbox value="3" checked='{{fqyt3}}'></checkbox>二手车</label>)</view>
+      <view class='demo2'><label style="font-size:20rpx"><checkbox value="4" checked='{{fqyt4}}'></checkbox>其他</label>
+        </view>
+		  </view>
+    </view>
+          </checkbox-group>
+    </view>
+        </view>
+    
+    <view class="grace-items">
+      <view class="grace-label clear">二手车车架号</view>
+      <input type="text" class="input" name='vin' value='{{periodization.vin}}' placeholder='二手车车架号'></input>
+      </view>
+      <view class="grace-items">
+      <view class="grace-label clear">按揭银行</view>
+      <input type="text" class="input" name='mortgageBank' value='{{periodization.mortgageBank}}' placeholder='按揭银行'></input>
+      </view>
+    <view class="grace-items">
+      <view class="grace-label clear">产品大类</view> 
+      <input type="text" class="input" name='productCategory' value='{{periodization.productCategory}}' placeholder='产品大类'></input>
+      </view>
+      <view class="grace-items">
+      <view class="grace-label clear">贷款产品</view> 
+      <input type="text" class="input" name='loanProducts' value='{{periodization.loanProducts}}' placeholder='贷款产品'></input>
+      </view>
+
+      <view style='color:red'>车辆信息</view>
+      <view class="grace-items ">
+        <view class="grace-label clear">品牌</view>
+        <input type="text" class="input" name="carTrademark" value='{{periodization.carTrademark}}' placeholder='品牌'></input>
+        </view>
+    <view class="grace-items">
+      <view class="grace-label clear">型号</view>
+      <input type="text" class="input" name='carType' value='{{periodization.carType}}' placeholder='型号'></input>
+      </view>
+    <view class="grace-items">
+      <view class="grace-label clear">价格</view>
+      <input type="text" class="input" name='carPrice' value='{{periodization.carPrice}}' placeholder='价格'></input>
+      </view>
+    <view class="grace-items">
+      <view class="grace-label clear">首付款</view>
+      <input type="text" class="input" name='initialPayment' value='{{periodization.initialPayment}}' placeholder='首付款'></input>
+      </view>
+      
+    <view class="grace-items">
+      <view class="grace-label clear">确认评估价格</view>
+      <input type="text" class="input" name='valuationPrice' value='{{periodization.valuationPrice}}' placeholder='确认评估价格'></input>
+      </view>
+      <view style='color:red'>申请额度</view>
+      <view class="grace-items">
+      <view class="grace-label clear" style='color:blue'>合计-其中:(</view>
+      <input type="text" class="input" name='total' value='{{periodization.total}}' placeholder='合计'></input>
+      </view>
+      <view class="grace-items">
+      <view class="grace-label clear" style='color:blue'>分期本金</view>
+      <input type="text" class="input" name='installmentCapital' value='{{periodization.installmentCapital}}' placeholder='分期本金'></input>
+      </view><view class="grace-items">
+      <view class="grace-label clear" style='color:blue'>手续费-)</view>
+      <input type="text" class="input" name='serviceCharge' value='{{periodization.serviceCharge}}' placeholder='手续费-'></input>
+      </view>
+      <view class="grace-items">
+      <view class="grace-label clear">放款卡号</view>
+      <input type="text" class="input" name='loanNumber' value='{{periodization.loanNumber}}' placeholder='放款卡号'></input>
+      </view><view class="grace-items">
+      <view class="grace-label clear">分期卡号</view>
+      <input type="text" class="input" name='installment' value='{{periodization.installment}}' placeholder='分期卡号'></input>
+      </view>
+      <view class="grace-items">
+      <view class="grace-label clear">分期期限</view>
+      <input type="text" class="input" name='installmentDeadline' value='{{periodization.installmentDeadline}}' placeholder='分期期限'></input>
+      </view>
+      <view class="grace-items">
+      <view class="grace-label clear">执行利率</view>
+      <input type="text" class="input" name='interestRate' value='{{periodization.interestRate}}' placeholder='执行利率'></input>
+      </view>
+      <view class="grace-items">
+      <view class="grace-label clear">客户卡费率</view>
+      <input type="text" class="input" name='customerCardRate' value='{{periodization.customerCardRate}}' placeholder='客户卡费率'></input>
+      </view>
+      
+      <view style='color:red'>拟提供担保情况</view>
+
+    <view class="grace-items">
+      <view class="grace-label clear">担保方式</view>
+     <view class="grace-label-x">
+        <checkbox-group name="guarantyStyle">
+          <label><checkbox value="1" checked='{{pegst1}}'></checkbox>单一担保</label>
+
+          <checkbox-group name="guarantyCate">
+          (<label><checkbox checked='{{pegC1}}'></checkbox>抵押</label>
+          <label><checkbox checked='{{pegC2}}'></checkbox>质押</label>)
+          </checkbox-group>
+
+          </checkbox-group>
+
+           <checkbox-group name="guarantyStyle" style='margin-left:150rpx;'>
+          <label ><checkbox value="2" checked='{{pegst2}}'></checkbox>组合担保</label>
+          <checkbox-group name="guarantyCate">
+          （<label><checkbox checked='{{pegC3}}'></checkbox>抵押</label>
+          <label><checkbox checked='{{pegC4}}'></checkbox>质押</label>
+          <label><checkbox checked='{{pegC5}}'></checkbox>保证</label>）
+          </checkbox-group>
+        </checkbox-group>
+        <checkbox-group>
+        <label><checkbox value="0" style='margin-left:150rpx;' checked='{{pegst3}}'></checkbox>无</label>
+        </checkbox-group>
+      </view>
+      
+      </view>
+      <view class="grace-items">
+      <view class="grace-label clear">抵，质押品</view>
+     <view class="grace-label-x">
+        <checkbox-group name="guarantee">
+          <label><checkbox value="1" checked='{{gtee1}}'></checkbox>所购车辆</label>
+          <label><checkbox value="2" checked='{{gtee2}}'></checkbox>自有房产</label>
+          <label><checkbox value="3" checked='{{gtee3}}'></checkbox>自由存单</label>
+         <label>其他<input style='float:right;margin-right:200rpx;height:50rpx;width:150rpx;border-radius:5px;outline:none;border-top-style: groove;border-right-style: groove;border-bottom-style: groove;border-left-style: groove;border:1px solid #a1a1a1;'></input></label>
+        </checkbox-group>
+      </view>
+      
+      </view>
+        <!-- -ok?- -->
+      <view class="grace-items">
+      <view class="grace-items">
+      <view class="grace-label clear">担保服务机构</view>
+      <input type="text" class="input" name='guaranteeServiceAgency' value='{{periodization.guaranteeServiceAgency}}' placeholder='担保服务机构'></input>
+      </view>
+      <view class="grace-label clear">类别</view>
+     <view class="grace-label-x">
+        <checkbox-group name="guaranteeServiceCate">
+          <label><checkbox value="1" checked='{{gsc1}}'></checkbox>担保公司</label>
+          <label><checkbox value="2" checked='{{gsc2}}'></checkbox>销售商</label>
+          <label><checkbox value="3" checked='{{gsc3}}'></checkbox>保险公司</label>
+          <label><checkbox value="0" checked='{{gsc0}}'></checkbox>其他</label>
+        </checkbox-group>
+      </view>
+      
+      <view class="grace-label clear">业务范围</view>
+      <checkbox-group name="scopeService"style="margin-top:20rpx;">
+          <label><checkbox value="1" checked='{{scs1}}'></checkbox>跨省</label>
+          <label><checkbox value="2" checked='{{scs2}}'></checkbox>本省跨地市</label>
+          <label><checkbox value="3" checked='{{scs3}}'></checkbox>本地市</label>
+        </checkbox-group>
+      </view>
+      <button formType="submit" type="primary" style="width:100%;">提交</button>
+    </form>
+        </view>
+      </view>
+    </view>
+    <!-- 项目3 -->
+    <view class="grace-accordion-items">
+      <view class="grace-accordion-title {{accordionActive == 'grace-accordion-4' ? 'grace-current' : ''}}" id="grace-accordion-4" bindtap="changeAccordion">
+        抵押人情况(抵押人非申请人本人时填写)
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-up" wx:if="{{accordionActive == 'grace-accordion-4'}}"></text>
+        <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-down" wx:else></text>
+      </view>
+      <view class="grace-accordion-body" wx:if="{{accordionActive == 'grace-accordion-4'}}">
+      <form bindsubmit="formSubmit6">
+      <view class="grace-list" style='border:none;'>
+      
+      <view style='color:red'>抵押信息</view>
+      <view class="grace-items">
+      <view class="grace-label clear">抵押性质</view>
+      </view><checkbox-group name="property">
+          <label><checkbox value="1" checked='{{moppt1}}'></checkbox>个人(申请人直系亲属)</label>
+          <label><checkbox value="0" checked='{{moppt2}}'></checkbox>公司</label>
+        </checkbox-group>
+      </view>
+      <view style='color:red;margin-top:20rpx;'>个人抵押人</view>
+      <view>抵押人信息</view>
+      <view class="grace-items">
+      <view class="grace-label clear">抵押人姓名</view>
+      <input type="text" class="input" name='mortgagerName' value='{{ mortgagor.mortgagerName}}' placeholder='抵押人姓名'></input>
+      </view>
+      <view class="grace-items">
+      <view class="grace-label clear">身份证号</view>
+      <input type="text" class="input" name='mortgagerIDNumber' value='{{ mortgagor.mortgagerIDNumber}}' placeholder='身份证号'></input>
+      </view>
+    
+       <view class="grace-items">
+       <view class="grace-label clear" >性别</view>
+      <checkbox-group name="sex" style="margin-top:30rpx;">
+          <label><checkbox value="1" checked='{{mosex2}}'></checkbox>男</label>
+          <label><checkbox value="0" checked='{{mosex1}}'></checkbox>女</label>
+        </checkbox-group>
+      </view>
+  
+  <view class="grace-items">
+       <view class="grace-label clear">与申请人关系</view>
+      <checkbox-group name="applicantRelation" style="margin-top:30rpx;">
+          <label><checkbox value="1" checked='{{apr1}}'></checkbox>父(母)子</label>
+          <label><checkbox value="0" checked='{{apr0}}'>子女</checkbox></label>
+        </checkbox-group>
+      </view>
+      <view class="grace-items">
+       <view class="grace-label clear">婚姻状况</view>
+      <checkbox-group name="marriage" style="margin-top:30rpx;">
+          <label><checkbox value="1" checked='{{momg1}}'></checkbox>有配偶</label>
+          <label><checkbox value="0" checked='{{momg0}}'></checkbox>无配偶</label>
+        </checkbox-group>
+      </view>
+      
+       <view class="grace-items">
+      <view class="grace-label clear">移动电话</view>
+      <input type="text" class="input" name='mortgagerPhone' value='{{ mortgagor.mortgagerPhone}}' placeholder='移动电话'></input>
+      </view>
+      
+      <view style='margin-top:20rpx;'>抵押人配偶信息</view>
+       <view class="grace-items">
+      <view class="grace-label clear">抵押人配偶姓名</view>
+      <input type="text" class="input" name='spouseName' value='{{ mortgagor.spouseName}}' placeholder='抵押人配偶姓名'></input>
+      </view>
+       <view class="grace-items">
+      <view class="grace-label clear">身份证号</view>
+      <input type="text" class="input" name='spouseIDNumber' value='{{ mortgagor.spouseIDNumber}}' placeholder='身份证号'></input>
+      </view>
+       <view class="grace-items">
+      <view class="grace-label clear">移动电话</view>
+      <input type="text" class="input" name='spousePhone' value='{{ mortgagor.spousePhone}}' placeholder='移动电话'></input>
+      </view>
+      <view>公司抵押人</view>
+      <view class="grace-items">
+      <view class="grace-label clear">公司名称</view>
+      <input type="text" class="input" name='companyName' value='{{ mortgagor.companyName}}' placeholder='公司名称'></input>
+        </view>
+        <view class="grace-items">
+      <view class="grace-label clear">类型</view>
+      <input type="text" class="input" name='companyType' value='{{ mortgagor.companyType}}' placeholder='类型'></input>
+        </view>
+         <view class="grace-items">
+       <view class="grace-label1 clear">申请人与公司抵押人关系</view>
+      <checkbox-group name="mortgagerCompanyRelation" style="margin-top:30rpx;">
+          <label><checkbox value="1" checked='{{mcrn1}}'></checkbox>法定代表人</label>
+          <label><checkbox value="2" checked='{{mcrn2}}'></checkbox>法定代表人父母或者子女</label>
+          <label><checkbox value="3" checked='{{mcrn3}}'></checkbox>法定代表人父母或者子女</label>
+          <label><checkbox value="4" checked='{{mcrn4}}'></checkbox>股东</label>
+          <label><checkbox value="5" checked='{{mcrn5}}'></checkbox>股东父母或子女</label>
+        </checkbox-group>
+      </view>
+    <view class="grace-items">
+      <view class="grace-label1 clear" style='display:block;white-space: pre-wrap;'>社会信用/机构/营业执照</view>
+      <textarea type="text" class="input1"  style='display:block;white-space: pre-wrap;'   name='businessLicense' value='{{ mortgagor.businessLicense}}' placeholder=''></textarea>
+      </view>
+      
+      <view style="padding:22rpx 0;">
+        <button formType="submit" type="primary" style="width:100%;">提交</button>
+      </view></form>
+      </view>
+       
+    </view>
+  </view>
+</view>

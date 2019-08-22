@@ -1,0 +1,235 @@
+    <view style='color:red'>基本信息</view>
+    <view class="grace-items ">
+        <view class="grace-label clear">业务编号</view>
+        <input type="text" class="input" value='{{applicantSpouse.NAME}}' ></input>
+    </view>
+    
+      <view class="grace-items ">
+        <view class="grace-label clear">业务品种:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.IDNumber}}'></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">车辆价格:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">贷款金额:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">贷款周期:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">利率:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">手续费:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">首付款:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">每月还款额:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+
+    <view class="grace-items ">
+        <view class="grace-label clear">票据单号:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">购车合同编号:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">商户名称:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">购车合同编号:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">客户专员:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">按揭银行:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">业务状态:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+
+    <view class="grace-items ">
+        <view class="grace-label clear">申请日期:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">车型:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    
+    <view style='color:red'>申请人信息</view>
+    <view class="grace-items ">
+        <view class="grace-label clear">客户名称:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view><view class="grace-items ">
+        <view class="grace-label clear">年龄:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">性别:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">户籍情况:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">证件类型:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">证件号码:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+   <view class="grace-items ">
+        <view class="grace-label clear">家庭住址:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view><view class="grace-items ">
+        <view class="grace-label clear">电话:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">工作单位:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">职务职级:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">月收入:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">卡号:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">原额度:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+   
+   <view class="grace-items ">
+        <view class="grace-label clear">家庭月负债:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view style='color:red'>共同还款人</view>
+    <view class="grace-items ">
+        <view class="grace-label clear">姓名:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+   <view class="grace-items ">
+        <view class="grace-label clear">联系电话:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+   <view class="grace-items ">
+        <view class="grace-label clear">证件类型:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+   <view class="grace-items ">
+        <view class="grace-label clear">证件号码
+:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+   <view class="grace-items ">
+        <view class="grace-label clear">工作单位:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+   <view class="grace-items ">
+        <view class="grace-label clear">职务职级:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+   <view class="grace-items ">
+        <view class="grace-label clear">月收入:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+   <view class="grace-items ">
+        <view class="grace-label clear">与申请人关系:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view style='color:red'>共同还款人</view>
+    <view class="grace-items ">
+        <view class="grace-label clear">是否抵押:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">抵押物:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">抵押办理人:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">抵押日期:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">抵押权证号:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">是否有担保:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view style='color:red'>车辆信息</view>
+    <view class="grace-items ">
+        <view class="grace-label clear">车牌号:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">保险公司:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view style='color:red'>筛查信息</view>
+    <view class="grace-items ">
+        <view class="grace-label clear">征信状态:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+     <view class="grace-items ">
+        <view class="grace-label clear">征信时间:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+     <view class="grace-items ">
+        <view class="grace-label clear">征信调查人:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+     <view class="grace-items ">
+        <view class="grace-label clear">风险扫描状态:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+     <view class="grace-items ">
+        <view class="grace-label clear">风险扫描时间:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+     <view class="grace-items ">
+        <view class="grace-label clear">人脸识别状态:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+     <view class="grace-items ">
+        <view class="grace-label clear">人脸识别时间:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    <view class="grace-items ">
+        <view class="grace-label clear">备注:</view>
+        <input type="text" class="input"  value='{{applicantSpouse.phone}}' ></input>
+    </view>
+    

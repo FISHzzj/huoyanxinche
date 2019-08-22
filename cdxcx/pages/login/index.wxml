@@ -1,0 +1,18 @@
+<view class="grace-padding grace-bg-white grace-common-mt grace-common-border">
+  <view class="grace-form">
+    <form bindsubmit="formSubmit">
+      <view class="grace-items">
+        <view class="grace-label">姓名</view>
+        <input type="text" class="input" name="name" value='admin' placeholder='用户名' ></input>
+      </view>
+    <view class="grace-items">
+        <view class="grace-label">密码</view>
+        <input type="password" class="input" name="password" value='123456' placeholder='密码' ></input>
+      </view>
+      <view class="grace-items">
+        <button formType="submit">login</button>
+      </view>
+    </form>
+  </view>
+</view>
+

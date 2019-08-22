@@ -1,0 +1,52 @@
+<graceHeader title="表单界面" desc="页面路径 pages/demo/form"></graceHeader>
+<view class="grace-padding grace-bg-white grace-common-mt grace-common-border">
+  <view class="grace-form">
+    <form bindsubmit="formSubmit">
+      <view class="grace-items">
+        <view class="grace-label">客户姓名</view>
+        <input type="text" class="input" name="clientName" value='{{clientName}}' placeholder='客户姓名'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label">身份证号码</view>
+        <input type="text" class="input" name="certificateNumber" value='{{certificateNumber}}' placeholder='身份证号码'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label">设备号</view>
+        <input type="text" class="input" name="imei" value='{{certificateNumber}}' placeholder='设备号'></input>
+      </view>
+      <view class="grace-items">
+        是否有信号
+       <view class="grace-label-y">
+          <radio-group name="isSignal">
+            <label><radio value="1" checked="{{istrue}}"/>是</label>
+            <label><radio value="0" checked="{{!istrue}}" />否</label>
+          </radio-group>
+        </view>
+      </view>
+      
+      <view class="grace-items">
+        <view  style='display:inline;padding:2rpx;'>
+      安装图片
+    </view>
+    <view class="grace-idcard-items" style="width:700rpx;" >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{InstallImage}}"name="InstallImage" bindtap="selectImg1" style='width:290rpx;height:99px;margin-left:20rpx;'></image>
+      </view>                   
+     
+    </view>
+      </view>
+  <!-- 视频 -->
+  <button style='width:146rpx;height:50rpx;font-size:25rpx;' bindtap='chooseVideo'>上传视频</button>
+    <view class="grace-idcard-main">
+    
+     <view class="grace-idcard-preview"  style="display:inline;margin-right:40rpx;">
+        <video  src="{{ carVideo}}" name="carVideo" style='width:100%;margin-right:40rpx;'></video>
+      </view>                   
+      </view>
+      <!-- 图片 -->
+      <view style="padding:22rpx 0;">
+        <button formType="submit" type="primary" style="width:100%;">提交</button>
+      </view>
+    </form>
+  </view>
+</view>

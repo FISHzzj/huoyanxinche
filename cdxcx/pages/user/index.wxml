@@ -1,0 +1,46 @@
+<view class="grace-rows" style="margin-top:15px;">
+
+<view class="grace-bg-white grace-common-mt grace-padding grace-common-border">
+  <!-- 新闻列表 -->
+    <view>
+    <view wx:if='{{isShow}}' bindtap='getlogin'>登录</view>
+      <view wx:else class="grace-news-list-items">
+      <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+<!-- <block wx:else>
+  <image src="{{userInfo.avatarUrl}}" class="userinfo-avatar" mode="widthFix"></image>
+</block> -->
+        
+        <view class="grace-news-list-title">
+          <view class="grace-news-list-title-main">用户名</view>
+          <text class="grace-news-list-title-desc grace-text-overflow username">{{userInfo.username}}</text>
+         <button style='width:160rpx;float:right;font-size:20rpx;' bindtap='logout'>退出登录</button>
+        </view>
+<!-- <view class="grace-news-tips"></view> -->
+      </view>
+    </view>
+    </view>
+</view>
+<view class="grace-padding grace-bg-white grace-common-mt grace-common-border">
+    <view class="grace-flex "  style="height:58px; line-height:58px; color:#FFF; justify-content:center;">
+    <view class="grace-news-list-title-main">
+    <image style='width:48px;height:48px;' src='../../static/img/ybrw.png'></image>
+    </view>
+    <view class="grace-news-list-title-main ttl">已办</view>
+    <text class="grace-news-list-title-desc grace-text-overflow" style='text-decoration:underline;color:red' bindtap='ybck'>点击查看</text>
+    </view>
+    <view class="grace-flex grace-common-border" style="height:58px; line-height:58px; color:#FFF; justify-content:center;">
+    <view class="grace-news-list-title-main">
+    <image style='width:48px;height:48px;' src='../../static/img/xx.png'></image>
+    </view>
+      <view class="grace-news-list-title-main ttl">消息</view>
+    <text class="grace-news-list-title-desc grace-text-overflow" style='text-decoration:underline;color:red' bindtap='wdxx'>点击查看</text>
+    </view>
+    <view class="grace-flex " style="height:58px; line-height:58px; color:#FFF; justify-content:center;">
+    <view class="grace-news-list-title-main">
+    <image style='width:48px;height:48px;' src='../../static/img/dbrw.png'></image>
+    </view>
+      <view class="grace-news-list-title-main ttl">待办</view>
+    <text class="grace-news-list-title-desc grace-text-overflow" style='text-decoration:underline;color:red' bindtap='dbck'>点击查看</text>
+    </view>
+</view>
+  

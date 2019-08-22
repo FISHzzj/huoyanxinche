@@ -1,0 +1,60 @@
+.grace-idcard-main{margin:20rpx 30rpx;}
+.grace-idcard-desc{line-height:2em; background:#FFFFFF; padding:20rpx; border-radius:10rpx;}
+.grace-idcard-text{line-height:2em; margin-top:30rpx;}
+.grace-idcard-items{background:#FFFFFF;  align-items: flex-start; padding:30rpx 0; display:flex; margin:30rpx 0;  border-radius:10rpx;}
+.grace-idcard-uper-btn{width:276rpx; margin:0 60rpx; background:#F1F1F1; padding-bottom:10rpx; border-radius:10rpx; text-align:center;}
+.grace-idcard-uper-btn .img{width:100rpx; height:100rpx; margin:0 auto; margin-top:30rpx;}
+.grace-idcard-uper-btn .img image{width:100rpx; height:100rpx;}
+.grace-idcard-uper-btn .text{width:100%; margin-top:10rpx; text-align:center; line-height:2em;}
+.grace-idcard-preview{width:50%; margin:0 30rpx;}
+.grace-idcard-preview image{width:100%;}
+.grace-label{
+  float: left;
+  width: 27%;
+  height: 58rpx;
+  line-height: 58rpx;
+  border: 1px solid grey
+}
+.wgin{
+  margin-left:100rpx;float:right;height:30rpx;width:150rpx;border-radius:5px;outline:none;border-top-style: groove;border-right-style: groove;border-bottom-style: groove;border-left-style: groove;border:1px solid #a1a1a1;
+}
+.grace-label1{
+  float: left;
+  width: 24%;
+  height: auto;
+  line-height: 58rpx;
+  border: 1px solid grey
+}
+.input{
+  float: left;
+  text-align: right;
+  width: 70%;
+  height: 58rpx;
+  line-height: 58rpx;
+  border: 1px solid grey
+}
+.input1{
+  float: left;
+  text-align: right;
+  width: 74%;
+  height: 116rpx;
+  display:block;white-space: pre-wrap;
+  line-height: 58rpx;
+  border: 1px solid grey
+}
+ .clear{
+   clear:both
+ }
+ .demo1{height:50px;margin-top: }
+.demo2{height:50px; width:100%;}
+.demo3{height:50px; margin-bottom:3px; width:33.3%;}
+.demo4{height:100px; width:33.3%; margin:5px;}
+.demo5{height:50px; width:33.3%; margin:5px;}
+.demo6{height:50px; width:33.3%; margin:5px;}
+.demo7{height:50px; width:20%; margin:5px;}
+.goinput{
+  float:right;margin-right:40rpx;margin-top:5rpx;height:40rpx;width:140rpx;border-radius:5px;outline:none;border-top-style: groove;border-right-style: groove;border-bottom-style: groove;border-left-style: groove;border:1px solid #a1a1a1;
+}
+.goinput2{
+  float:left;margin-left:20rpx;margin-top:5rpx;height:40rpx;width:140rpx;border-radius:5px;outline:none;border-top-style: groove;border-right-style: groove;border-bottom-style: groove;border-left-style: groove;border:1px solid #a1a1a1;
+}

@@ -1,0 +1,90 @@
+{
+  "pages": [
+    "pages/xd/index",
+    "pages/edit/ybrw/jbxx",
+    "pages/webrtc-room/index/index",
+    "pages/webrtc-room/room/room",
+    "pages/edit/ybrw/yxxx",
+    "pages/add/test/index",
+    "pages/xdpage/dzgl/index",
+    "pages/xdpage/cargl/index",
+    "pages/xdpage/meeting/meeting",
+    "pages/xdpage/vargl/index",
+    "pages/xdpage/zlzb/index",
+    "pages/xdpage/khlb/index",
+    "pages/edit/khlb/index",
+    "pages/xdpage/mqjl/index",
+    "pages/xdpage/clgl/index",
+    "pages/add/addcar/index",
+    "pages/index/index",
+    "pages/xdpage/ybrw/index",
+    "pages/xdpage/ybrwck/index",
+    "pages/xdpage/dbrw/index",
+    "pages/xdpage/dbrwck/index",
+    "pages/add/addgps/index",
+    "pages/edit/editGps/index",
+    "pages/xdpage/websocket/index",
+    "pages/xdpage/spmq/index",
+    "pages/xdpage/test/test",
+    "pages/xdpage/sfzsb/index",
+    "pages/xdpage/wdxx/index",
+    "pages/user/index",
+    "pages/xdpage/zxsq/index",
+    "pages/edit/editcredit/index",
+    "pages/add/addcredit/index",
+    "pages/add/addesc/index",
+    "pages/xdpage/escpg/index",
+    "pages/xdpage/escpg/escpg/index",
+    "pages/edit/editesc/index",
+    "pages/test/index",
+    "pages/popy/index",
+    "pages/login/index",
+    "pages/pop/index",
+    "pages/logs/logs",
+    "pages/audit/escaudit/index",
+    "pages/search/escSearch/index",
+    "pages/xdpage/gpsgl/index",
+    "pages/add/khlb/index",
+    "pages/xdpage/yqkh/index",
+    "pages/xdpage/dhcs/index",
+    "pages/xdpage/dhsc/index",
+    "pages/xdpage/dcgl/index",
+    "pages/xdpage/jzdy/index",
+    "pages/edit/editcar/index",
+    "pages/edit/dbrw/jbxx",
+    "pages/edit/dbrw/sqrxx",
+    "pages/edit/dbrw/yxxx",
+    "pages/edit/dbrw/spxx",
+    "pages/edit/ybrw/sxxx",
+    "pages/edit/ybrw/rwck"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./static/img/h.png",
+        "selectedIconPath": "./static/img/h-1.png"
+      },
+      {
+        "pagePath": "pages/xd/index",
+        "text": "业务列表",
+        "iconPath": "./static/img/lc.png",
+        "selectedIconPath": "./static/img/lc-1.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "用户页",
+        "iconPath": "./static/img/w-1.png",
+        "selectedIconPath": "./static/img/w.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

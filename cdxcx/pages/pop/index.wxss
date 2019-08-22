@@ -1,0 +1,5 @@
+/* pages/pop/index.wxss */
+.demo-btn-1{width:28px; height:28px; float:right; border-radius:3px; border:1px solid #00C777; text-align:center; font-size:0;}
+.demo-btn-1 image{width:18px; height:18px; margin:5px;}
+.grace-list view{color:#FFF;}
+.grace-list .title{border:0;}

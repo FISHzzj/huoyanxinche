@@ -1,0 +1,100 @@
+<graceHeader title="表单界面" desc="页面路径 pages/demo/form"></graceHeader>
+<view class="grace-padding grace-bg-white grace-common-mt grace-common-border">
+  <view class="grace-form">
+    <form bindsubmit="formSubmit">
+      <view class="grace-items">
+        <view class="grace-label ">征信人类别</view>
+        <view class="grace-form-r">
+          <picker bindchange="bindPickerChange" :value="genderIndex" range="{{creditType}}" name="gender">
+            <input type="text" class="input" value='{{creditType[genderIndex]}}' name="creditType" placeholder='征信人类别'></input>
+          </picker>
+        </view>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label">客户姓名</view>
+        <input type="text" class="input" name="clientName" placeholder='客户姓名'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label">身份证号</view>
+        <input type="text" class="input" name="IDNumber" placeholder='身份证号'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label">身份证有效期</view>
+        <view class="section">
+  
+</view>
+<picker mode="date"
+    value="{{IDNumberIndate}}"
+    start="2019-05-01"
+    end="2030-09-01"
+    bindchange="bindDateChange" name="IDNumberIndate">
+      <input type="text" class="input" value='{{IDNumberIndate}}' name="IDNumberIndate" placeholder='身份证有效期'></input>
+  </picker>
+        
+      </view>
+      <view class="grace-items">
+        <view class="grace-label">手机号</view>
+        <input type="text" class="input" name="phone" placeholder='手机号'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label">贷款银行</view>
+        <input type="text" class="input" name="lendingBank" placeholder='贷款银行'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label">业务区域</view>
+        <input type="text" class="input" name="businessArea" placeholder='业务区域'></input>
+      </view>
+      <view class="grace-items">
+        <view class="grace-label">身份证地址</view>
+        <input type="text" class="input" name="IDNumberAddress" placeholder='身份证地址'></input>
+      </view>
+
+      <!-- 图片 -->
+      
+  <view class="grace-idcard-main">
+  <view style='color:red'>证件照片</view>
+    <view  style='display:inline;'>
+      借款人身份证正面照
+    </view><view  style='float:right'>
+      借款人身份证反面照
+
+    </view>
+    <view class="grace-idcard-items" style="width:700rpx;" >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carOnePic}}" bindtap="selectImg1" style='width:290rpx;height:99px'></image>
+      </view>                   
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carTwoPic}}" bindtap="selectImg2" style='width:290rpx;height:99px'></image>
+      </view>
+    </view>
+ 
+    <view  style='display:inline;'>
+      借款人征信查询授权书
+    </view><view  style='float:right'>
+      借款人授权书签字照片
+    </view>
+    <view class="grace-idcard-items" style="width:700rpx;" >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carThreePic}}" bindtap="selectImg3" style='width:290rpx;height:99px'></image>
+      </view>                   
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carFourPic}}" bindtap="selectImg4" style='width:290rpx;height:99px'></image>
+      </view>
+    </view>
+ 
+    <view  style='display:inline;'>
+     借款人网络征信授权书
+    </view>
+    <view class="grace-idcard-items" style="width:700rpx;" >
+      <view class="grace-idcard-preview" style="display:inline;">
+        <image  src="{{carFivePic}}" bindtap="selectImg5" style='width:290rpx;height:99px'></image>
+      </view>                   
+    </view>
+  </view>
+  <!-- 车辆内饰图片 -->
+      <view style="padding:22rpx 0;">
+        <button formType="submit" type="primary" style="width:100%;">提交</button>
+      </view>
+    </form>
+  </view>
+</view>

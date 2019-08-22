@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "graceDate": "../../../graceUI/components/graceDate",
+    "gracePopupMenu": "../../../graceUI/components/gracePopupMenu",
+    "graceMaskView": "../../../graceUI/components/graceMaskView"
+  },
+  "enablePullDownRefresh":true,
+  "navigationBarTitleText": "面签记录"
+}
